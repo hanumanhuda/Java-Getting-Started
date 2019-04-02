@@ -7,8 +7,7 @@ Generate Jar file by adding menifest file
 Extract Jar file
     jar -xvf GettingStarted.jar
 
-Executing Program from Jar file
+Executing Program using Jar file
     jar -jar GettingStarted.jar argv...
 
-=======
 
