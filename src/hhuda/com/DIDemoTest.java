@@ -1,5 +1,6 @@
 package hhuda.com;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.awt.*;
@@ -11,10 +12,14 @@ public class DIDemoTest {
     @Test
     public void postButtonClicked() {
         System.out.println("Tested Started");
+
         TextField textField =new TextField();
         textField.setText("Button Text is test");
+
         DIDemo diDemo =new DIDemo(textField);
-        diDemo.postButtonClicked();
+        Assert.assertNotEquals("Hello DI",diDemo.postButtonClicked());
+
+        System.out.println("Test Completed Successfully");
     }
 
     // Write a main method only if:

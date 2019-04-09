@@ -1,7 +1,5 @@
 package hhuda.com;
 
-import org.junit.Test;
-
 import java.awt.*;
 
 public class DIDemo {
@@ -10,10 +8,11 @@ public class DIDemo {
     public DIDemo(TextField textField){
         this.textField = textField;
     }
+
     //this method is not testable because Dependencies are calling to real method so all
     //dependencies must execute to run this Test
     //this issue can be resolved by factory pattern or DI
-    public void postButtonClicked(){
+    public String  postButtonClicked(){
             String text = textField.getText();
             if (text.length() > 140){
                 Shortener  shortener =  new TinyUrlShortener();
@@ -21,20 +20,24 @@ public class DIDemo {
             }
             if( text.length() < 140 ){
                 Tweeter tweeter = new SMSTweeter();
-                tweeter.send(text);
+                return tweeter.send(text);
             }
+            return null;
     }
+
+
+
 }
 
 interface Tweeter{
-    void send(String text);
+    String send(String text);
 }
 
 class SMSTweeter implements Tweeter{
 
     @Override
-    public void send(String text) {
-        System.out.println("SMSTweeter.send(): SMS Tweeter send the text as: "+text);
+    public String send(String text) {
+        return text;
     }
 }
 
