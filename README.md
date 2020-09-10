@@ -14,7 +14,7 @@ $set name=hanuman(In Windows)
 $export name=hanuman(In Unix) 
 @src/
 $javac hhuda/com/Main.java hhuda/com/Person.java
-$java hhuda.com.Main Java
+$java Main Java
 Hello World! Java
 Environment Property as Name : hanuman
 System Property as Username : Hanuman
@@ -52,5 +52,5 @@ $src/
 $javac -cp "../lib/*;." hhuda/com/DIDemoTest.java hhuda/com/DIDemo.java
 
 //Run Test Case
-java -cp "../lib/*;." org.junit.runner.JUnitCore hhuda.com.DIDemoTest
+java -cp "../lib/*;." org.junit.runner.JUnitCore DIDemoTest
 ~~~~~~~~

@@ -1,4 +1,4 @@
-package hhuda.com;
+package com.hhuda;
 
 public class Person {
     private String name;

@@ -1,11 +1,9 @@
-package hhuda.com;
+package com.hhuda;
 
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.awt.*;
-
-import static org.junit.Assert.*;
 
 public class DIDemoTest {
 
@@ -27,6 +25,6 @@ public class DIDemoTest {
     //     - you want your class to be self-executable.
     public static void main(String[] args) {
         System.out.println("Test Main Started");
-        //org.junit.runner.JUnitCore.main("hhuda.com.DIDemoTest");
+        //org.junit.runner.JUnitCore.main("DIDemoTest");
     }
 }

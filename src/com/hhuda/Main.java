@@ -1,4 +1,4 @@
-package hhuda.com;
+package com.hhuda;
 
 import static java.lang.System.exit;
 

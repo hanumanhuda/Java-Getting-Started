@@ -1,8 +1,6 @@
-package hhuda.com;
+package com.hhuda;
 
-import org.junit.Assert;
 import org.junit.Test;
-import org.mockito.Mock;
 
 import java.awt.*;
 
@@ -26,7 +24,10 @@ public class DIFactoryTest {
 
         //here tweeter.send can mocked so which will not call actual method
         DIFactory diDemo =new DIFactory(textField);
-        Assert.assertEquals("Hello DI",diDemo.postButtonClicked());
+        assertEquals("Hello DI",diDemo.postButtonClicked());
+
+        //Issues: EOP, Dependencies has to be cleaned up otherwise can impact other test cases.
+        //TweeterFactory.setTweeter(null); and this should be in finally to execute it safely
 
         System.out.println("Test Completed Successfully");
     }
